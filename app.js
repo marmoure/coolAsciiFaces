@@ -7,6 +7,12 @@ const cool = require("cool-ascii-faces");
 const app = express();
 
 app.use((req, res, next) => {
+    console.log("gotten a request ");
+    next();
+  })
+  
+
+app.use((req, res, next) => {
     res.send(cool());
 });
 
